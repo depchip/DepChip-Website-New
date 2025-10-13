@@ -72,10 +72,53 @@ h1, h2, h3, h4, h5,
 /* Navbar Start */
 
 .logo-img {
-  width: 100px;
+  height: 40px; /* fixed height so nav height doesn’t increase */
+  width: auto;  /* maintain aspect ratio */
+  object-fit: contain;
+  /* width: 100px; */
 }
+
+
+/* Hide dark version by default */
+.logo-dark,
+.logo-text-dark {
+  display: none;
+}
+
+.logo-light,
+.logo-text-light {
+  display: inline-block;
+}
+
+/* Show dark version on scroll */
+.aideniti-nav.scrolled .logo-light,
+.aideniti-nav.scrolled .logo-text-light {
+  display: none;
+}
+
+.aideniti-nav.scrolled .logo-dark,
+.aideniti-nav.scrolled .logo-text-dark {
+  display: inline-block;
+}
+
+/* Text styles */
+.logo-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+.logo-text-light {
+  color: white;
+}
+
+.logo-text-dark {
+  color: black; /* or your dark mode color */
+}
+
+
 /* Logo Styles */
-.logo-light {
+/* .logo-light {
   display: block;
 }
 .logo-dark {
@@ -83,17 +126,21 @@ h1, h2, h3, h4, h5,
 }
 
 /* Scrolled State */
-.aideniti-nav.scrolled .logo-light {
+/* .aideniti-nav.scrolled .logo-light {
   display: none;
 }
 .aideniti-nav.scrolled .logo-dark {
   display: block;
-}
+} */ 
 
 /* Smooth Transition */
 .nav-logo {
-  position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center; /* vertically center logo + text */
+  gap: 8px; /* spacing between logo and text */
+  text-decoration: none;
+  /* position: relative;
+  display: inline-block; */
 }
 
 .logo-dark {
@@ -875,14 +922,17 @@ textarea {
 
 #section-services .main-highlights {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;           /* allow multiple rows */
+  align-items: stretch;      /* make all cards same height */
+  /* align-items: center; */
   justify-content: center;
   margin-bottom: 100px;
   gap: 15px;
 }
 
 #section-services .main-highlights .highlights { 
-  min-height: 300px;
+  flex: 1 1 300px;           /* flexible width, min 300px */
+  /* min-height: 300px; */
   position: relative;
   z-index: 1;
   color: white;
@@ -1158,7 +1208,6 @@ textarea {
   position: relative;
   z-index: 2;
 }
-
 
 
 #ftco-loader {
