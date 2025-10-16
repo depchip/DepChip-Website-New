@@ -25,7 +25,7 @@ $(document).ready(function($) {
 					$('#ftco-loader').removeClass('show');
 					$('#ftco-loader').fadeOut(600);
 				}
-			}, 5000);
+			}, 1500);
 		});
 		
 		// Handle errors
@@ -38,13 +38,23 @@ $(document).ready(function($) {
 		});
 		
 		const messages = [
-			"AI is revolutionizing industries with predictive intelligence.",
-			"90% of top enterprises are investing in AI-driven automation.",
-			"AI-powered decisions improve efficiency by 40%.",
-			"Smart algorithms enhance customer personalization by 300%.",
-			"AI is driving a $15 trillion boost to the global economy by 2030.",
-			"Automation powered by AI saves companies millions annually."
+			"Your idea deserves intelligence.",
+			"AI isn’t the future it’s your competitive edge.",
+			"Building the next unicorn? Start with smart code.",
+			"Innovation moves faster with AI in the driver’s seat.",
+			"Turning bold ideas into intelligent products.",
+			"Smarter code. Faster growth. Bigger impact.",
+			"From spark to scale powered by AI.",
+			"Tomorrow’s products are being built today by us.",
+			"Dream it. Code it. Automate it.",
+			"Where startups evolve into smart enterprises.",
+			"AI is your unfair advantage let’s use it.",
+			"We don’t just build apps. We build intelligence.",
+			"Launching brilliance one algorithm at a time.",
+			"Speed. Scale. Intelligence. Delivered.",
+			"Smart tech for bold thinkers."
 		];
+
   
 		function changeMessage() {
 			let messageElement = document.getElementById("ai-message");
@@ -303,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// ======================
 	// Navigation Functions
 	// ======================
-	const nav = document.querySelector('.aideniti-nav');
+	const nav = document.querySelector('.depchip-nav');
 	const hamburger = document.querySelector('.hamburger');
 	const navMenu = document.querySelector('.nav-links');
 	const navLinks = document.querySelectorAll('.nav-links a');
