@@ -6,18 +6,40 @@ $(document).ready(function($) {
 	var loader = function() {
 		const backgroundVideo = document.getElementById("background-video");
 
+		// Log video element for debugging
+		console.log('Video element:', backgroundVideo);
+		console.log('Video src:', backgroundVideo ? backgroundVideo.querySelector('source').src : 'No video element');
+
 		// Set a maximum timeout to hide loader regardless
 		const maxLoadTime = setTimeout(() => {
+			console.log('Max load time reached, hiding loader');
 			if ($('#ftco-loader').length > 0) {
 				$('#ftco-loader').removeClass('show');
 				$('#ftco-loader').fadeOut(600);
 			}
 		}, 3000); // 3 seconds max
 
+		if (!backgroundVideo) {
+			console.error('Video element not found');
+			clearTimeout(maxLoadTime);
+			if ($('#ftco-loader').length > 0) {
+				$('#ftco-loader').removeClass('show');
+				$('#ftco-loader').fadeOut(600);
+			}
+			return;
+		}
+
+		// Force video to be visible
+		backgroundVideo.style.opacity = '1';
+		backgroundVideo.style.display = 'block';
+
 		backgroundVideo.load();
 
 		// Safari requires this for proper loading
-		backgroundVideo.play().catch(() => {
+		backgroundVideo.play().then(() => {
+			console.log('Video playback started successfully');
+		}).catch((error) => {
+			console.error('Video autoplay failed:', error);
 			// If autoplay fails, just hide the loader
 			clearTimeout(maxLoadTime);
 			if ($('#ftco-loader').length > 0) {
@@ -28,6 +50,7 @@ $(document).ready(function($) {
 
 		// Handle buffering
 		backgroundVideo.addEventListener('waiting', () => {
+			console.log('Video buffering...');
 			if ($('#ftco-loader').length > 0) {
 				$('#ftco-loader').addClass('show');
 			}
@@ -35,6 +58,7 @@ $(document).ready(function($) {
 
 		// Handle successful playback
 		backgroundVideo.addEventListener('playing', () => {
+			console.log('Video playing successfully');
 			clearTimeout(maxLoadTime);
 			setTimeout(() => {
 				if ($('#ftco-loader').length > 0) {
@@ -44,9 +68,15 @@ $(document).ready(function($) {
 			}, 1500);
 		});
 
+		// Handle when video can start playing
+		backgroundVideo.addEventListener('canplay', () => {
+			console.log('Video can play');
+		});
+
 		// Handle errors
-		backgroundVideo.addEventListener('error', () => {
-			console.error('Video loading failed');
+		backgroundVideo.addEventListener('error', (e) => {
+			console.error('Video loading failed:', e);
+			console.error('Video error code:', backgroundVideo.error ? backgroundVideo.error.code : 'unknown');
 			clearTimeout(maxLoadTime);
 			if ($('#ftco-loader').length > 0) {
 				$('#ftco-loader').removeClass('show');
