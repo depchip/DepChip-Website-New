@@ -5,11 +5,26 @@ $(document).ready(function($) {
 	// loader
 	var loader = function() {
 		const backgroundVideo = document.getElementById("background-video");
-		
+
+		// Set a maximum timeout to hide loader regardless
+		const maxLoadTime = setTimeout(() => {
+			if ($('#ftco-loader').length > 0) {
+				$('#ftco-loader').removeClass('show');
+				$('#ftco-loader').fadeOut(600);
+			}
+		}, 3000); // 3 seconds max
+
 		backgroundVideo.load();
-    
+
 		// Safari requires this for proper loading
-		backgroundVideo.play().catch(() => {});
+		backgroundVideo.play().catch(() => {
+			// If autoplay fails, just hide the loader
+			clearTimeout(maxLoadTime);
+			if ($('#ftco-loader').length > 0) {
+				$('#ftco-loader').removeClass('show');
+				$('#ftco-loader').fadeOut(600);
+			}
+		});
 
 		// Handle buffering
 		backgroundVideo.addEventListener('waiting', () => {
@@ -20,17 +35,19 @@ $(document).ready(function($) {
 
 		// Handle successful playback
 		backgroundVideo.addEventListener('playing', () => {
-			setTimeout(() => {			
+			clearTimeout(maxLoadTime);
+			setTimeout(() => {
 				if ($('#ftco-loader').length > 0) {
 					$('#ftco-loader').removeClass('show');
 					$('#ftco-loader').fadeOut(600);
 				}
 			}, 1500);
 		});
-		
+
 		// Handle errors
 		backgroundVideo.addEventListener('error', () => {
 			console.error('Video loading failed');
+			clearTimeout(maxLoadTime);
 			if ($('#ftco-loader').length > 0) {
 				$('#ftco-loader').removeClass('show');
 				$('#ftco-loader').fadeOut(600);

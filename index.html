@@ -15,7 +15,10 @@
   <meta name="author" content="depchip" />
   <meta name="lazy-loaded-video" content="disabled">
   <link rel="icon" href="assets/favicon-16x16.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <!-- Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.css">
@@ -42,10 +45,10 @@
       <div class="nav-menu">
         <ul class="nav-links">
           <li><a href="#section-home" class="active">Home</a></li>
-          <li><a href="#why-choose-us">Why Choose Us?</a></li>
+          <li><a href="#why-choose-us">Why Us</a></li>
           <li><a href="#section-services">Services</a></li>
-          <li><a href="#section-our-approach">Our Approach</a></li>
-          <li><a href="#section-faq">FAQ</a></li>
+          <li><a href="#section-portfolio">Portfolio</a></li>
+          <li><a href="#section-about">About</a></li>
           <li><a href="#section-contact" class="nav-cta">Contact</a></li>
         </ul>
       </div>
@@ -58,21 +61,79 @@
     </div>
   </nav>
 
-  <section class="ftco-cover ftco-slant" id="section-home" style="padding: 0;">
-    <!-- Add a video background -->
+  <section class="ftco-cover ftco-slant hero-modern" id="section-home">
+    <!-- Video Background -->
     <video preload="auto" crossorigin="anonymous" autoplay loop playsinline muted id="background-video"
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; filter:blur(3px); z-index: -1;">
+      class="hero-video">
       <source src="assets/home_page_video.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div style="background-color: rgb(0, 0, 0, 0.2);">
-      <div class="container">
-        <div class="row flex-column align-items-center justify-content-center text-center ftco-vh-100 pt-0">
-          <h1 class="ftco-heading ftco-animate">From Concept to Code</h1>
-          <h2 class="ftco-subheading ftco-animate pb-3"><b>Building Smart Solutions That Drive Real Growth</b></h2>
-          <a href="#why-choose-us" class="btn btn-primary ftco-animate">Explore Depchip</a>
+
+    <!-- Gradient Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Hero Content -->
+    <div class="container hero-container">
+      <div class="row align-items-center justify-content-center text-center ftco-vh-100">
+        <div class="col-lg-10">
+          <!-- Badge -->
+          <div class="hero-badge ftco-animate" data-animate-effect="fadeIn">
+            <span class="badge-icon">✨</span>
+            <span>AI-Powered Digital Solutions</span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="hero-title ftco-animate" data-animate-effect="fadeInUp">
+            From Concept to Code
+          </h1>
+
+          <!-- Subheading -->
+          <p class="hero-subtitle ftco-animate" data-animate-effect="fadeInUp">
+            Building smart solutions that drive real growth. We transform bold ideas into powerful digital products with cutting-edge AI integration.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-cta-group ftco-animate" data-animate-effect="fadeInUp">
+            <a href="#section-contact" class="btn btn-hero-primary">
+              Start Your Project
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#why-choose-us" class="btn btn-hero-secondary">
+              Explore Our Work
+            </a>
+          </div>
+
+          <!-- Trust Indicators -->
+          <div class="hero-stats ftco-animate" data-animate-effect="fadeInUp">
+            <div class="stat-item">
+              <div class="stat-number">25+</div>
+              <div class="stat-label">Clients</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Years</div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator ftco-animate" data-animate-effect="fadeIn">
+      <a href="#why-choose-us">
+        <div class="scroll-icon">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll to explore</span>
+      </a>
     </div>
   </section>
 
@@ -487,6 +548,366 @@
                     class="ftco-number">+</span></div>
                 <span class="ftco-label">Years of Experience</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ftco-animate" style="text-align: center;">
+      <img src="assets/page-divider.svg" style="height: 5px; width: 100%;">
+    </div>
+
+    <!-- Portfolio / Case Studies Section -->
+    <section id="section-portfolio" class="ftco-section portfolio-section">
+      <div class="container">
+        <div class="ftco-animate text-center mb-5">
+          <h1 class="ftco-title">Featured Projects</h1>
+          <h4 class="ftco-sub-heading">Real results for real clients transforming ideas into impactful solutions</h4>
+        </div>
+
+        <!-- Portfolio Filter -->
+        <div class="portfolio-filter ftco-animate text-center mb-5">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
+          <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+          <button class="filter-btn" data-filter="saas">SaaS Platform</button>
+          <button class="filter-btn" data-filter="ai">AI/ML</button>
+        </div>
+
+        <div class="row portfolio-grid">
+          <!-- Project Card 1 -->
+          <div class="col-lg-4 col-md-6 mb-4 ftco-animate portfolio-item" data-category="web ai">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img src="assets/web_and_mobile_app.jpg" alt="Project 1">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h3>E-Commerce Platform</h3>
+                    <p>Full-stack development with AI recommendations</p>
+                    <div class="portfolio-tags">
+                      <span class="tag">React</span>
+                      <span class="tag">Node.js</span>
+                      <span class="tag">AI/ML</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-content">
+                <div class="portfolio-meta">
+                  <span class="category">Web Development</span>
+                  <span class="impact">300% Growth</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="col-lg-4 col-md-6 mb-4 ftco-animate portfolio-item" data-category="mobile">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img src="assets/ui_ux.jpg" alt="Project 2">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h3>Healthcare Management System</h3>
+                    <p>Patient portal with real-time monitoring</p>
+                    <div class="portfolio-tags">
+                      <span class="tag">Flutter</span>
+                      <span class="tag">Firebase</span>
+                      <span class="tag">IoT</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-content">
+                <div class="portfolio-meta">
+                  <span class="category">Mobile App</span>
+                  <span class="impact">10K+ Users</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="col-lg-4 col-md-6 mb-4 ftco-animate portfolio-item" data-category="saas">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img src="assets/cloud_computing.jpg" alt="Project 3">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h3>Fintech Dashboard</h3>
+                    <p>Real-time analytics and transaction processing</p>
+                    <div class="portfolio-tags">
+                      <span class="tag">Next.js</span>
+                      <span class="tag">AWS</span>
+                      <span class="tag">Data Viz</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-content">
+                <div class="portfolio-meta">
+                  <span class="category">SaaS Platform</span>
+                  <span class="impact">$2M Raised</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 4 -->
+          <div class="col-lg-4 col-md-6 mb-4 ftco-animate portfolio-item" data-category="ai web">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img src="assets/consulting.jpg" alt="Project 4">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h3>AI Chatbot Platform</h3>
+                    <p>Intelligent customer support automation system</p>
+                    <div class="portfolio-tags">
+                      <span class="tag">Python</span>
+                      <span class="tag">GPT-4</span>
+                      <span class="tag">React</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-content">
+                <div class="portfolio-meta">
+                  <span class="category">AI/ML</span>
+                  <span class="impact">80% Cost Reduction</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 5 -->
+          <div class="col-lg-4 col-md-6 mb-4 ftco-animate portfolio-item" data-category="mobile saas">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img src="assets/networking.jpg" alt="Project 5">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h3>Fitness Tracking App</h3>
+                    <p>Social fitness platform with real-time sync</p>
+                    <div class="portfolio-tags">
+                      <span class="tag">React Native</span>
+                      <span class="tag">Firebase</span>
+                      <span class="tag">ML Kit</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-content">
+                <div class="portfolio-meta">
+                  <span class="category">Mobile App</span>
+                  <span class="impact">50K+ Downloads</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 6 -->
+          <div class="col-lg-4 col-md-6 mb-4 ftco-animate portfolio-item" data-category="web saas">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img src="assets/system-integration.jpg" alt="Project 6">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h3>Project Management Tool</h3>
+                    <p>Collaborative workspace for distributed teams</p>
+                    <div class="portfolio-tags">
+                      <span class="tag">Vue.js</span>
+                      <span class="tag">Node.js</span>
+                      <span class="tag">PostgreSQL</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-content">
+                <div class="portfolio-meta">
+                  <span class="category">SaaS Platform</span>
+                  <span class="impact">1000+ Teams</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ftco-animate" style="text-align: center;">
+      <img src="assets/page-divider.svg" style="height: 5px; width: 100%;">
+    </div>
+
+    <!-- Testimonials Section -->
+    <section id="section-testimonials" class="ftco-section testimonials-section">
+      <div class="container">
+        <div class="ftco-animate text-center mb-5">
+          <h1 class="ftco-title">What Our Clients Say</h1>
+          <h4 class="ftco-sub-heading">Don't just take our word for it hear from the businesses we've transformed</h4>
+        </div>
+
+        <!-- Testimonials Carousel -->
+        <div class="testimonials-carousel-wrapper">
+          <button class="carousel-nav prev" aria-label="Previous testimonial">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+        <div class="row testimonials-grid testimonials-carousel">
+          <!-- Testimonial Card 1 -->
+          <div class="col-lg-4 col-md-6 mb-4 ftco-animate">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                  <path d="M10 9V5C10 3.89543 9.10457 3 8 3H4C2.89543 3 2 3.89543 2 5V9C2 10.1046 2.89543 11 4 11H8C9.10457 11 10 10.1046 10 9Z" fill="#34BEFE" opacity="0.2"/>
+                  <path d="M22 9V5C22 3.89543 21.1046 3 20 3H16C14.8954 3 14 3.89543 14 5V9C14 10.1046 14.8954 11 16 11H20C21.1046 11 22 10.1046 22 9Z" fill="#34BEFE" opacity="0.2"/>
+                </svg>
+              </div>
+              <p class="testimonial-text">
+                "DepChip transformed our startup vision into reality. Their AI integration boosted our user engagement by 250%. The team's expertise and dedication are unmatched."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>Sarah Johnson</h4>
+                  <p>CEO, TechStartup Inc.</p>
+                </div>
+                <div class="rating">
+                  ⭐⭐⭐⭐⭐
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 2 -->
+          <div class="col-lg-4 col-md-6 mb-4 ftco-animate">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                  <path d="M10 9V5C10 3.89543 9.10457 3 8 3H4C2.89543 3 2 3.89543 2 5V9C2 10.1046 2.89543 11 4 11H8C9.10457 11 10 10.1046 10 9Z" fill="#1FD7CD" opacity="0.2"/>
+                  <path d="M22 9V5C22 3.89543 21.1046 3 20 3H16C14.8954 3 14 3.89543 14 5V9C14 10.1046 14.8954 11 16 11H20C21.1046 11 22 10.1046 22 9Z" fill="#1FD7CD" opacity="0.2"/>
+                </svg>
+              </div>
+              <p class="testimonial-text">
+                "Working with DepChip was seamless from day one. They delivered our mobile app ahead of schedule and the quality exceeded expectations. Highly recommend!"
+              </p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>Michael Chen</h4>
+                  <p>Founder, HealthTech Solutions</p>
+                </div>
+                <div class="rating">
+                  ⭐⭐⭐⭐⭐
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 3 -->
+          <div class="col-lg-4 col-md-6 mb-4 ftco-animate">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                  <path d="M10 9V5C10 3.89543 9.10457 3 8 3H4C2.89543 3 2 3.89543 2 5V9C2 10.1046 2.89543 11 4 11H8C9.10457 11 10 10.1046 10 9Z" fill="#facc15" opacity="0.2"/>
+                  <path d="M22 9V5C22 3.89543 21.1046 3 20 3H16C14.8954 3 14 3.89543 14 5V9C14 10.1046 14.8954 11 16 11H20C21.1046 11 22 10.1046 22 9Z" fill="#facc15" opacity="0.2"/>
+                </svg>
+              </div>
+              <p class="testimonial-text">
+                "The cloud infrastructure they built for us is rock-solid. Zero downtime since launch. Their DevOps expertise saved us countless headaches and money."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>David Rodriguez</h4>
+                  <p>CTO, FinanceFlow</p>
+                </div>
+                <div class="rating">
+                  ⭐⭐⭐⭐⭐
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ftco-animate" style="text-align: center;">
+      <img src="assets/page-divider.svg" style="height: 5px; width: 100%;">
+    </div>
+
+    <!-- About Us Section -->
+    <section id="section-about" class="ftco-section about-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 ftco-animate">
+            <div class="about-image-wrapper">
+              <div class="about-image-main">
+                <img src="assets/high-rise.jpg" alt="DepChip Team" class="img-fluid rounded-lg">
+              </div>
+              <div class="about-stats-card">
+                <div class="stat-card-item">
+                  <h3>100%</h3>
+                  <p>Client Satisfaction</p>
+                </div>
+                <div class="stat-card-divider"></div>
+                <div class="stat-card-item">
+                  <h3>24/7</h3>
+                  <p>Support Available</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 ftco-animate">
+            <div class="about-content">
+              <div class="section-badge">
+                <span>About DepChip</span>
+              </div>
+              <h2 class="ftco-title mb-4">Building The Future, One Product At A Time</h2>
+              <p class="description mb-4">
+                DepChip is a product development partner dedicated to transforming bold ideas into market-ready digital solutions. We specialize in AI-powered applications, scalable cloud infrastructure, and user-centric design.
+              </p>
+              <p class="description mb-4">
+                Founded with a mission to empower startups and enterprises, we combine technical excellence with strategic thinking to deliver products that don't just work they excel.
+              </p>
+
+              <div class="about-features">
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#34BEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>Dedicated Teams</h4>
+                    <p>Full-stack experts committed to your success</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M13 10V3L4 14H11L11 21L20 10L13 10Z" stroke="#1FD7CD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>Rapid Delivery</h4>
+                    <p>From MVP to market in weeks, not months</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M7 8L3 12L7 16M17 8L21 12L17 16M14 4L10 20" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>Scalable Solutions</h4>
+                    <p>Built to grow from startup to enterprise</p>
+                  </div>
+                </div>
+              </div>
+
+              <a href="#section-contact" class="btn btn-primary mt-4">Let's Talk</a>
             </div>
           </div>
         </div>
