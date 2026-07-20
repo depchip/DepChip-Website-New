@@ -1,0 +1,32 @@
+title: "DepChip"
+description: "AI product engineering for modern software teams, plus practical tutorials and honest lessons on automation, AI, and building great software."
+url: "https://depchip.com"
+baseurl: ""
+lang: en_US
+timezone: Asia/Karachi
+logo: /assets/dep_chip_logo1.png
+
+author:
+  name: "DepChip"
+  email: "info@depchip.com"
+
+permalink: /blog/:title/
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: "DepChip Team"
+      cta_variant: soft
+      image: /assets/og-image.jpg
+
+exclude:
+  - scss/
+  - README.md

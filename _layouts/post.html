@@ -1,0 +1,34 @@
+---
+layout: default
+---
+{% assign words = content | number_of_words %}
+{% assign reading_time = words | divided_by: 200 | at_least: 1 %}
+
+<section class="section" id="post-top">
+  <div class="container">
+    <article class="post-article" data-reveal>
+      <div class="section-header" style="text-align: left; margin: 0 0 2.5rem;">
+        <span class="eyebrow">{{ page.category | default: "Insights" | replace: '-', ' ' | capitalize }}</span>
+        <h1>{{ page.title }}</h1>
+
+        <div class="post-meta">
+          <span>{{ page.author | default: "DepChip Team" }}</span>
+          <span aria-hidden="true">&middot;</span>
+          <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+          <span aria-hidden="true">&middot;</span>
+          <span>{{ reading_time }} min read</span>
+          {% if page.series and page.series_order %}
+            <span aria-hidden="true">&middot;</span>
+            <span>Part {{ page.series_order }} of the {{ page.series | replace: '-', ' ' | capitalize }} series</span>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="post-body">
+        {{ content }}
+      </div>
+    </article>
+
+    {% include post-cta.html %}
+  </div>
+</section>

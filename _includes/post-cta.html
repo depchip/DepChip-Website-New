@@ -1,0 +1,27 @@
+{% assign variant = page.cta_variant | default: "soft" %}
+{% unless variant == "none" %}
+<div class="cta-panel post-cta" data-reveal>
+  <div class="cta-layout">
+    <div>
+      <span class="eyebrow">Need this automated for you?</span>
+      <h2>
+        {% if variant == "strong" %}
+          Stop doing this by hand — let's build it properly.
+        {% else %}
+          Like this workflow? We build these for teams every week.
+        {% endif %}
+      </h2>
+    </div>
+    <div>
+      <p class="lead">
+        DepChip designs and ships practical automation and AI-integrated systems — from a single n8n workflow to
+        a full internal platform. If this post solved a problem you recognize, we can help you take it further.
+      </p>
+      <div class="hero-actions" style="margin-top: 1.25rem;">
+        <a class="btn btn-primary" href="{{ '/' | relative_url }}#section-contact">Talk to DepChip</a>
+        <a class="btn btn-secondary" href="{{ '/blog/' | relative_url }}">More tutorials</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endunless %}

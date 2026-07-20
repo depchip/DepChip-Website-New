@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<section class="section" id="section-blog-home">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <span class="eyebrow">Insights</span>
+      <h1>The DepChip Blog</h1>
+      <p class="lead">
+        Practical tutorials and honest lessons pulled straight from client work: automation, AI, product engineering,
+        and everything we're learning building software every week.
+      </p>
+    </div>
+
+    <div class="portfolio-showcase blog-grid">
+      {% for post in site.posts %}
+        <article class="portfolio-card" data-reveal>
+          <a href="{{ post.url | relative_url }}" class="blog-card-link">
+            <span class="portfolio-label">{{ post.category | default: "Insights" | replace: '-', ' ' | capitalize }}</span>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.description }}</p>
+            <div class="portfolio-meta">
+              <span class="stack-pill">{{ post.date | date: "%b %-d, %Y" }}</span>
+              {% assign words = post.content | number_of_words %}
+              <span class="stack-pill">{{ words | divided_by: 200 | at_least: 1 }} min read</span>
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

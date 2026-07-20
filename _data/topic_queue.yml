@@ -1,0 +1,103 @@
+# Ordered curriculum consumed by the future n8n content-generation workflow (Phase B)
+# and editable directly by a human. status: pending -> drafted -> in_review -> published
+series:
+  n8n-tutorials:
+    - order: 1
+      slug: what-is-n8n-and-why-should-you-automate-your-workflows
+      title: "What Is n8n and Why Should You Automate Your Workflows?"
+      status: published
+      brief: "Beginner orientation: what n8n is, node/trigger/workflow vocabulary, honest n8n vs Zapier vs Make framing, first conceptual example."
+    - order: 2
+      slug: installing-n8n-docker-vs-npm-vs-cloud
+      title: "Installing n8n: Docker, npm, and n8n Cloud Compared"
+      status: pending
+      brief: "Decision table for the 3 real install paths; end with a working local instance."
+    - order: 3
+      slug: first-workflow-webhook-to-slack
+      title: "Your First Workflow: Trigger a Slack Message from a Webhook"
+      status: pending
+    - order: 4
+      slug: nodes-items-and-the-n8n-data-model
+      title: "Understanding Nodes, Items, and the n8n Data Model (JSON In, JSON Out)"
+      status: pending
+    - order: 5
+      slug: http-request-node-calling-any-rest-api
+      title: "Working with the HTTP Request Node: Calling Any REST API"
+      status: pending
+    - order: 6
+      slug: schedule-triggers-vs-webhooks
+      title: "Schedule Triggers vs Webhooks: Choosing the Right Trigger for the Job"
+      status: pending
+    - order: 7
+      slug: data-transformation-set-function-code-nodes
+      title: "Data Transformation with the Set, Function, and Code Nodes"
+      status: pending
+    - order: 8
+      slug: conditional-logic-if-switch-merge
+      title: "Conditional Logic: IF, Switch, and Merge Nodes Explained"
+      status: pending
+    - order: 9
+      slug: error-handling-and-retries-in-n8n
+      title: "Error Handling and Retries: Building Workflows That Don't Silently Fail"
+      status: pending
+    - order: 10
+      slug: automating-google-sheets-reporting
+      title: "Connecting n8n to Google Sheets: Automated Reporting Pipelines"
+      status: pending
+    - order: 11
+      slug: email-and-notification-workflows
+      title: "Automating Email and Notification Workflows (Gmail/SMTP + Slack/Discord)"
+      status: pending
+    - order: 12
+      slug: lead-capture-to-crm-pipeline
+      title: "Building a Lead-Capture-to-CRM Pipeline (Web Form to Airtable/HubSpot)"
+      status: pending
+    - order: 13
+      slug: credentials-and-environment-variables-securely
+      title: "Using Credentials and Environment Variables Securely in n8n"
+      status: pending
+    - order: 14
+      slug: sub-workflows-and-execute-workflow-node
+      title: "Sub-workflows and the Execute Workflow Node: Structuring Complex Automations"
+      status: pending
+    - order: 15
+      slug: self-hosting-n8n-in-production-queue-mode
+      title: "Self-Hosting n8n in Production: Queue Mode, Workers, and Scaling with Docker Compose"
+      status: pending
+    - order: 16
+      slug: building-an-ai-agent-workflow-in-n8n
+      title: "Building an AI Agent Workflow in n8n with the AI Agent Node and Tools"
+      status: pending
+  ai-insights:
+    - order: 1
+      slug: prompt-engineering-fundamentals-for-builders
+      title: "Prompt Engineering Fundamentals for Builders (System Design, Not Just Prompting)"
+      status: pending
+    - order: 2
+      slug: rag-explained-how-retrieval-augmented-generation-works
+      title: "RAG Explained: How Retrieval-Augmented Generation Actually Works"
+      status: pending
+    - order: 3
+      slug: hosted-llm-apis-vs-self-hosted-models
+      title: "Hosted LLM APIs vs Self-Hosted Models (Ollama, vLLM): Cost, Latency, and Privacy Tradeoffs"
+      status: pending
+    - order: 4
+      slug: what-are-ai-agents-really
+      title: "What Are AI Agents, Really? Separating the Architecture from the Marketing Hype"
+      status: pending
+    - order: 5
+      slug: vector-databases-101
+      title: "Vector Databases 101: When You Need One and When You Don't"
+      status: pending
+    - order: 6
+      slug: fine-tuning-vs-prompting-vs-rag
+      title: "Fine-Tuning vs Prompting vs RAG: Picking the Right Tool for Your AI Feature"
+      status: pending
+    - order: 7
+      slug: guardrails-and-evaluation-for-llm-features
+      title: "Guardrails and Evaluation: Keeping an LLM Feature From Embarrassing You in Production"
+      status: pending
+    - order: 8
+      slug: n8n-plus-llm-automating-a-real-back-office-task
+      title: "AI Automation Case Study: Combining n8n and an LLM to Automate a Real Back-Office Task"
+      status: pending

@@ -1,0 +1,36 @@
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="DepChip home">
+        <img src="{{ '/assets/dep_chip_logo1.png' | relative_url }}" alt="DepChip logo">
+        <span class="brand-mark">
+          <span>DepChip</span>
+          <small>AI Product Studio</small>
+        </span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+        <span class="nav-toggle-line"></span>
+      </button>
+
+      <div class="nav-menu" id="site-menu">
+        <nav aria-label="Primary">
+          <ul class="nav-links">
+            <li><a class="nav-link" href="{{ '/' | relative_url }}#section-home">Home</a></li>
+            <li><a class="nav-link" href="{{ '/' | relative_url }}#why-choose-us">Why us</a></li>
+            <li><a class="nav-link" href="{{ '/' | relative_url }}#section-services">Services</a></li>
+            <li><a class="nav-link" href="{{ '/' | relative_url }}#section-portfolio">Work</a></li>
+            <li><a class="nav-link{% if page.url contains '/blog' %} is-active{% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a></li>
+            <li><a class="nav-link" href="{{ '/' | relative_url }}#section-about">About</a></li>
+            <li><a class="nav-link" href="{{ '/' | relative_url }}#section-faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn-primary nav-cta" href="{{ '/' | relative_url }}#section-contact">Book a call</a>
+      </div>
+    </div>
+  </header>
