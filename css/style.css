@@ -1529,6 +1529,42 @@ textarea {
   border-radius: var(--radius-md);
 }
 
+.post-body table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+}
+
+.post-body th,
+.post-body td {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--color-card-border);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.post-body thead th {
+  background: var(--color-surface-strong);
+  color: var(--color-heading);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .post-body table {
+    font-size: 0.85rem;
+  }
+
+  .post-body th,
+  .post-body td {
+    padding: 0.5rem 0.7rem;
+  }
+}
+
 /* Rouge syntax highlighting */
 .highlight {
   background: var(--color-surface-strong);
