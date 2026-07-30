@@ -8,7 +8,7 @@ series: n8n-tutorials
 series_order: 2
 ---
 
-Which install method to use is one of the first real decisions anyone new to n8n runs into, and the honest answer takes longer to give than you'd expect, because it actually depends on what you're trying to do. There isn't a single right answer here, just three reasonable ones for three different situations. So instead of picking one for you, we're going to walk through what each option actually costs you, then get an instance running so the next post in this series has something to work with.
+Whenever someone new gets started with n8n, the first real question is how to actually run it. n8n Cloud for roughly €20 a month, self-hosted on a laptop that can't stay on around the clock, or self-hosted on a VPS you keep running yourself? There isn't a single right answer here, just three reasonable ones for three different situations. So instead of picking one for you, we're going to walk through what each option actually costs you, then get an instance running so the next post in this series has something to work with.
 
 ## The three real options
 
