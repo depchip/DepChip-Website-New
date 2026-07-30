@@ -8,7 +8,7 @@ series: n8n-tutorials
 series_order: 2
 ---
 
-A client asked us last week which install method they should use, and the honest answer took longer than expected because it actually depends on what they're trying to do. There isn't a single right answer here, just three reasonable ones for three different situations. So instead of picking one for you, we're going to walk through what each option actually costs you, then get an instance running so the next post in this series has something to work with.
+Which install method to use is one of the first real decisions anyone new to n8n runs into, and the honest answer takes longer to give than you'd expect, because it actually depends on what you're trying to do. There isn't a single right answer here, just three reasonable ones for three different situations. So instead of picking one for you, we're going to walk through what each option actually costs you, then get an instance running so the next post in this series has something to work with.
 
 ## The three real options
 
